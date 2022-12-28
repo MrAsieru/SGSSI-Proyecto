@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "SGSSI-Proyecto (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "SGSSI-Proyecto (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
