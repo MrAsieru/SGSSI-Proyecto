@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using Windows.Storage;
 
-namespace SGSSI_Proyecto.Models
+namespace SGSSI_Proyecto.WinUI3.Models
 {
     internal class Elemento : INotifyPropertyChanged
     {

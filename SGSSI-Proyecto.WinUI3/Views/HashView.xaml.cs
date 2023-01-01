@@ -1,4 +1,4 @@
-﻿using Microsoft.Toolkit.Uwp.UI.Controls;
+﻿using CommunityToolkit.WinUI.UI.Controls;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -7,11 +7,11 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Windows.Storage;
-using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
-using SGSSI_Proyecto.Models;
+using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Controls;
+using SGSSI_Proyecto.WinUI3.Models;
 
-namespace SGSSI_Proyecto.Views
+namespace SGSSI_Proyecto.WinUI3.Views
 {
     public sealed partial class HashView : Page
     {
@@ -46,6 +46,8 @@ namespace SGSSI_Proyecto.Views
             };
             picker.FileTypeFilter.Add("*");
 
+            var hwnd = WinRT.Interop.WindowNative.GetWindowHandle(App.m_window);
+            WinRT.Interop.InitializeWithWindow.Initialize(picker, hwnd);
             var files = await picker.PickMultipleFilesAsync();
             if (files.Count > 0)
             {
@@ -65,6 +67,8 @@ namespace SGSSI_Proyecto.Views
             };
             folderPicker.FileTypeFilter.Add("*");
 
+            var hwnd = WinRT.Interop.WindowNative.GetWindowHandle(App.m_window);
+            WinRT.Interop.InitializeWithWindow.Initialize(folderPicker, hwnd);
             StorageFolder folder = await folderPicker.PickSingleFolderAsync();
             if (folder != null)
             {

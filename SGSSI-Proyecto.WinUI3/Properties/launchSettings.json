@@ -1,9 +1,9 @@
 {
   "profiles": {
-    "SGSSI-Proyecto (Package)": {
+    "SGSSI-Proyecto.WinUI3 (Package)": {
       "commandName": "MsixPackage"
     },
-    "SGSSI-Proyecto (Unpackaged)": {
+    "SGSSI-Proyecto.WinUI3 (Unpackaged)": {
       "commandName": "Project"
     }
   }

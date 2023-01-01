@@ -4,7 +4,7 @@ using System.Collections.ObjectModel;
 using System.Collections.Specialized;
 using System.ComponentModel;
 
-namespace SGSSI_Proyecto.Models
+namespace SGSSI_Proyecto.WinUI3.Models
 {
     public class TrulyObservableCollection<T> : ObservableCollection<T>
         where T : INotifyPropertyChanged
