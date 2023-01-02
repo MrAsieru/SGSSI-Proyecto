@@ -42,7 +42,8 @@
                 <toolkit:DataGrid.Columns>
                     <toolkit:DataGridTemplateColumn
                         Width="SizeToHeader"
-                        CanUserResize="False">
+                        CanUserResize="False"
+                        CanUserSort="False">
                         <toolkit:DataGridTemplateColumn.CellTemplate>
                             <DataTemplate x:DataType="models:Elemento">
                                 <CheckBox IsChecked="{x:Bind Seleccionado, Mode=TwoWay}"  Margin="12,0,0,0" MinWidth="32" Click="CheckBoxElemento_Click"/>
